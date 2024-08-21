@@ -1,0 +1,19 @@
+﻿@model _10Days_OUT_CLDV.Models.Customer
+
+<h1>Add New Customer</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Customer_Name"></label>
+        <input asp-for="Customer_Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Email"></label>
+        <input asp-for="Customer_Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Password"></label>
+        <input asp-for="Customer_Password" class="form-control" type="password" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<_10Days_OUT_CLDV.Models.Transaction>
+
+<h1>All Transactions</h1>
+<a href="@Url.Action("Register", "Transactions")" class="btn btn-primary">Add New Transaction</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Product ID</th>
+            <th>Category</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model)
+        {
+            <tr>
+                <td>@transaction.Customer_ID</td>
+                <td>@transaction.Product_ID</td>
+                <td>@transaction.Transaction_Category</td>
+                <td>@transaction.Transaction_Date</td>
+            </tr>
+        }
+    </tbody>
+</table>
